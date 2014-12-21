@@ -1,28 +1,17 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Car Video Links
 
-Things you may want to cover:
+INSTALLATION:
 
-* Ruby version
+After downloading or pulling the repository:
 
-* System dependencies
+1) Ensure you have Ruby and Rails installed. You can check by typing ruby -v and rails -v respectively.
 
-* Configuration
+2) Open the directory you downloaded the application to.
 
-* Database creation
+3) On the command line run: bundle install
 
-* Database initialization
+4) On the command line run: bin/rails s
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+5) In your browser go to the following url: localhost:3000
