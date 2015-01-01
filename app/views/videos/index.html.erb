@@ -1,16 +1,28 @@
-<h1>Car Video Listings</h1>
-<% @videos.each do |video| %>
-<table class="table table-hover">
-	<td><h4><%= video.name%></h4>
-	<%= video.description %><br>
-	<%= video.url %><br>
-	|<%= link_to 'Edit', edit_video_path(video) %>|
-	|<%= link_to 'Show', video_path(video) %>|
-	|<%= link_to 'Delete', video_path(video), method: :delete, data: { confirm: "Are you sure?" } %>|
-	</td>
-<% end %>
-</table>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6">
+			<h1>Car Video Listings</h1>
+		</div>
+		<div class="col-xs-6">
+			<%= render 'shared/navigation' %>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<% @videos.each do |video| %>
+	<table class="table table-hover">
+		<td><h4><%= video.name%></h4>
+		<%= video.description %><br>
+		<%= video.url %><br>
+		|<%= link_to 'Edit', edit_video_path(video) %>|
+		|<%= link_to 'Show', video_path(video) %>|
+		|<%= link_to 'Delete', video_path(video), method: :delete, data: { confirm: "Are you sure?" } %>|
+		</td>
+	<% end %>
+	</table>
 
 
-<%= link_to "New Video", new_video_path, class: 'btn btn-primary' %><br>
-<%= will_paginate @videos %>
+	<%= link_to "New Video", new_video_path, class: 'btn btn-primary' %><br>
+	<%= will_paginate @videos %>
+</div>
